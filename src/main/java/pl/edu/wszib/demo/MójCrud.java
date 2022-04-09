@@ -2,6 +2,7 @@ package pl.edu.wszib.demo;
 
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +19,7 @@ public class MójCrud {
     public static class ToDo {
         public Integer id;
         public String nazwa;
+        @NotNull
         public Status status;
 
         public Status getStatus() {
